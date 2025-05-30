@@ -1,5 +1,5 @@
+// Create a new Audio object for playing music
 const music = new Audio('');
-
 //songs library
 const songData = [
     ["On My Way", "Alan Walker"],
@@ -7,7 +7,7 @@ const songData = [
     ["Millionaire", "Honey Singh"],
     ["Heart Over Mind", "Alan Walker"],
     ["Dil Tu Jaan Tu", "..."],
-    ["On-My-Way", "Alan Walker"],
+    ["My Way", "Alan Walker"],
     ["Time Traveller", "..."],
     ["Yesterday", "..."],
     ["Moscow Suka", "Honey Singh"],
@@ -22,6 +22,7 @@ const songData = [
     ["You And Me Not Same", "Lipsika Bhashyam"]
 ];
 
+// Create song objects with id, formatted name, and poster path
 const songs = songData.map((item, index) => ({
     id: (index + 1).toString(),
     songname: `${item[0]} <br><div class="subtitle">${item[1]}</div>`,
@@ -54,7 +55,7 @@ songs.forEach(elem => {
                                 </div>`
     search_result.appendChild(card);
 });
-
+// Search functionality: filter songs based on input
 let input = document.getElementsByTagName('input')[0];
 input.addEventListener('keyup', () => {
     let input_value = input.value.toUpperCase();  // Get the input value and convert to uppercase
